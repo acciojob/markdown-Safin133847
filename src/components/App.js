@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown";  
 
 const App = () => {
   const [markdownText, setMarkdownText] = useState("");
@@ -8,10 +8,9 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); 
+    }, 1000);
     return () => clearTimeout(timer);
   }, [markdownText]); 
-
   const handleMarkdownChange = (event) => {
     setMarkdownText(event.target.value);
   };
@@ -43,4 +42,3 @@ const App = () => {
 };
 
 export default App;
-
